@@ -7,3 +7,7 @@ venv/
 
 # Logs
 *.log
+
+# env
+*.env
+env.bat
