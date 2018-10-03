@@ -9,6 +9,7 @@ flask-cors = "*"
 pymongo = "*"
 "flake8" = "*"
 gunicorn = "*"
+jsonify = "*"
 
 [dev-packages]
 

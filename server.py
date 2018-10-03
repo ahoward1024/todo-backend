@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 import db
 import json
@@ -24,20 +24,20 @@ def todos_get():
 
 @app.route('/todos.add', methods=['POST'])
 def todo_add():
-    db.add_todo(request.json)
-    return 'ok', 201
+    response = db.add_todo(request.json)
+    return jsonify(response)
 
 
 @app.route('/todos.toggle', methods=['PUT'])
 def todo_toggle():
-    db.toggle_todo(request.json)
-    return 'ok', 200
+    response = db.toggle_todo(request.json)
+    return jsonify(response)
 
 
 @app.route('/todos.toggleall', methods=['PUT'])
 def todo_toggle_all():
-    db.toggle_todo_all(request.json)
-    return 'ok', 200
+    response = db.toggle_todo_all(request.json)
+    return jsonify(response)
 
 
 @app.route('/healthcheck', methods=['GET'])
