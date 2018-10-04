@@ -1,5 +1,5 @@
-import constants
 import os
+from server import constants
 
 auth = {
     constants.MONGO_USER: os.environ[constants.MONGO_USER],

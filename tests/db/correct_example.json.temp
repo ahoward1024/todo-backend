@@ -1,0 +1,28 @@
+[
+    {
+        "_id": {
+            "$oid": "5bb409d496fd0a186484d1f7"
+        },
+        "text": "asdf",
+        "id": "e6a8fe134c0f40e9bbe175e372f82b5f",
+        "completed": true,
+        "time": "2018-10-02 18:14:12.017987"
+    },
+    {
+        "_id": {
+            "$oid": "5bb51bf896fd0a13d81bf0b1"
+        },
+        "text": "blah",
+        "id": "fb5e36a912b64331a9667adfb8abd35a",
+        "completed": true,
+        "time": "2018-10-03 13:43:52.257603"
+    },
+    {
+        "_id": {
+            "$oid": "5bb520d296fd0a2898f98999"
+        },
+        "id": "checkall",
+        "completed": false
+    }
+
+]
