@@ -8,8 +8,8 @@ import pytest
 
 
 def create_app():
-    app = Flask(__name__)
-    return app
+    my_app = Flask(__name__)
+    return my_app
 
 
 app = create_app()
