@@ -1,16 +1,17 @@
 language: python
 python:
-  - 3.6
+- 3.6
 env:
   global:
-    - MONGO_DB_NAME=debug MONGO_DB_COLLECTION=debug_todo MONGO_DOMAIN=localhost MONGO_HEROKU=heroku MONGO_PASS=password MONGO_PORT=12345 MONGO_USER=user
+  - MONGO_DB_NAME=debug MONGO_DB_COLLECTION=debug_todo MONGO_DOMAIN=localhost MONGO_HEROKU=heroku
+    MONGO_PASS=password MONGO_PORT=12345 MONGO_USER=user
 install:
-  - make init
+- make init
 script:
-  - make lint
-  - make test
+- make lint
+- make test
 deploy:
   provider: heroku
   api_key:
-    secure: kUljV8SbCsgIxVInS3Dd4ZylMhUtsXRaa4eIj443+ClpnIInDfj1ZZO6gfmeq6j8A3ZF5nae/TFgFelglg8fPaWdKN00MQNwSwrPZ5gyq2TlDX0A2JWgP0y5uTqx+gmQ9nkgytDEVcdxrAZ5scTmviE2Sb8imiR62XAF7fpEYb4QOfzW+TvUwqdlabQ7vo3l+MyoQ9HmXTzt6O8xgQoKtILAY975ALgLjZYkRiSLQwwFRgM8GvCwHv5b3xqiu7LgCO+CelyNI/4hGajRyv3l1a8Cp5n5QiIlcb82oV3RBGQoYX8+Ct9Wz9MtQY7wlkPNSjn+hqgpPtAv9GToBYFTECXfZLiQJAxIJbauhUT8o1YH3rnRRjPaXl42a2KucmIQs99ySYfasZpZpmd8lTril5CQVvKCcOjrNKoB0aYL0Z1Zp2WZnl/39tkSrIWZrt35qGLNCwJug3m9GekexipiU/HxU7DxjqNCt9yoWID7snGb4Z0vP1yMQJpkJrGACr5nKaoZqDlX5Y+H+/8jtzJ77Lyg0oUTBpfYo5WXm2+G8KX43Enuugu9wCHCZ1o3UtnQOGHQI5zVBQG6BiLdEADVW1LG+MG32afKxKDEGLy8383d5jgRoEB416hKulM0oLBOmnPJNCDWp8oSI3Wz5Zs9DrcCHlNyMpWyLy3rQXxKTYA=
+    secure: iz6pAbSw5WzlhgEo36zLoviKQw/RCQSNi+/uV9v/2kJHMkpnRru8JYCtiAjYd2Z5fJs6AtaZKhFFFb1Mth6E4Njkjkak6RUvdwOppn4PLYG8TnPbeviLNPSkpnLU4MGsLYcfgIc3bHaQovfU9apZEEyAPF9fETsfWJAgYANXvdFqK/5t8FqAN7D1qTPNxqTanMn4TjHVlg+PQswet17rrsj39kw0OvirX6MHIulg1LSTWmRajYAe9VZpzkoqI41xp2rB1F5yn5yY8TG/0BBxeQmkTTzR9T4J3/v622euDQYp3ull6jedajYyweak+JqTbXqcP8YGEiCJQYhnTwvEFi7BQS2nSnrXb2B4UamqFBxe2Qa3JSooE5lFDqLfatt0GDQ91IPj1jovWt6rKhEWLrbZg3zDXnGnyGln4OVx9YqD1OWrhBTthr9h17LhBUoHLqdUzPRQTP6JHR+eFmaF6QeZmzpsTW/9NiUPfRgX4wuTefFCwfspph8xHOtw+BuIsOBwC3c5tRM+EMpOePluzEwrWsc+nsoPW286TfnsdHzTdhGgfq1WbP2erf4hpQmMgPR2aalXZJSk65Lc3N7391gSPX1AUPCYc9b5nr8q18p6RU9VNs9kEUAtBj7W2UGM2ND4QhAm/ilj0WlikJMxIfeu+iA26aGQdjZ0n0W3gAo=
   app: nameless-inlet-33375
