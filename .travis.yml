@@ -3,13 +3,7 @@ python:
   - 3.6
 env:
   global:
-    - MONGO_DB_NAME=debug
-    - MONGO_DB_COLLECTION=debug_todo
-    - MONGO_DOMAIN=localhost
-    - MONGO_HEROKU=heroku
-    - MONGO_PASS=password
-    - MONGO_PORT=12345
-    - MONGO_USER=user
+    - MONGO_DB_NAME=debug MONGO_DB_COLLECTION=debug_todo MONGO_DOMAIN=localhost MONGO_HEROKU=heroku MONGO_PASS=password MONGO_PORT=12345 MONGO_USER=user
 install:
   - make init
 script:
