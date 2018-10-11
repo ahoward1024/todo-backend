@@ -1,20 +1,19 @@
 language: python
 python:
-	- 3.6
+- 3.6
 env:
-	- MONGO_DB_NAME=debug
-	- MONGO_DB_COLLECTION=debug_todo
-	- MONGO_DOMAIN=localhost
-	- MONGO_HEROKU=heroku
-	- MONGO_PASS=password
-	- MONGO_PORT=12345
-	- MONGO_USER=user
+- MONGO_DB_NAME=debug
+- MONGO_DB_COLLECTION=debug_todo
+- MONGO_DOMAIN=localhost
+- MONGO_HEROKU=heroku
+- MONGO_PASS=password
+- MONGO_PORT=12345
+- MONGO_USER=user
 install:
-	- make init
+- make init
 script:
-	- make lint
-	- make test
+- make lint
+- make test
 deploy:
   api_key:
     secure: kUljV8SbCsgIxVInS3Dd4ZylMhUtsXRaa4eIj443+ClpnIInDfj1ZZO6gfmeq6j8A3ZF5nae/TFgFelglg8fPaWdKN00MQNwSwrPZ5gyq2TlDX0A2JWgP0y5uTqx+gmQ9nkgytDEVcdxrAZ5scTmviE2Sb8imiR62XAF7fpEYb4QOfzW+TvUwqdlabQ7vo3l+MyoQ9HmXTzt6O8xgQoKtILAY975ALgLjZYkRiSLQwwFRgM8GvCwHv5b3xqiu7LgCO+CelyNI/4hGajRyv3l1a8Cp5n5QiIlcb82oV3RBGQoYX8+Ct9Wz9MtQY7wlkPNSjn+hqgpPtAv9GToBYFTECXfZLiQJAxIJbauhUT8o1YH3rnRRjPaXl42a2KucmIQs99ySYfasZpZpmd8lTril5CQVvKCcOjrNKoB0aYL0Z1Zp2WZnl/39tkSrIWZrt35qGLNCwJug3m9GekexipiU/HxU7DxjqNCt9yoWID7snGb4Z0vP1yMQJpkJrGACr5nKaoZqDlX5Y+H+/8jtzJ77Lyg0oUTBpfYo5WXm2+G8KX43Enuugu9wCHCZ1o3UtnQOGHQI5zVBQG6BiLdEADVW1LG+MG32afKxKDEGLy8383d5jgRoEB416hKulM0oLBOmnPJNCDWp8oSI3Wz5Zs9DrcCHlNyMpWyLy3rQXxKTYA=
-
