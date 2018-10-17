@@ -16,4 +16,4 @@ lint:
 test:
 	@echo 'Running tests'
 	@echo $$PATH
-	pipenv run pytest --cov-report html --junit-xml=coverage.xml --cov-branch --cov-fail-under=90 -v --cov=tests/
+	pipenv run pytest --cov-report html --cov-report xml:codecov.xml --junit-xml=coverage.xml --cov-branch --cov-fail-under=90 -v --cov=server tests/
