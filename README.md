@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/ahoward1024/todo-backend.svg?branch=master)](https://travis-ci.org/ahoward1024/todo-backend)
 [![codecov](https://codecov.io/gh/ahoward1024/todo-backend/branch/master/graph/badge.svg)](https://codecov.io/gh/ahoward1024/todo-backend)
 
 # TODO BACKEND
