@@ -10,9 +10,10 @@ pymongo = "*"
 "flake8" = "*"
 gunicorn = "*"
 jsonify = "*"
-pytest-cov = "*"
 pytest = "*"
 pytest-mongodb = "*"
+pytest-cov = "*"
+codecov = "*"
 
 [dev-packages]
 
