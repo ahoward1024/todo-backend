@@ -3,18 +3,17 @@ python:
 - 3.6
 env:
   global:
-  - MONGO_DB_NAME=debug MONGO_DB_COLLECTION=debug_todo MONGO_DOMAIN=localhost MONGO_HEROKU=heroku
-    MONGO_PASS=password MONGO_PORT=12345 MONGO_USER=user
+  - MONGO_DB_NAME=debug MONGO_DB_COLLECTION=debug_todo MONGO_DOMAIN=localhost MONGO_AUTH=mongodb://user:pass@localhost:12345/instance
 install:
 - make init
 script:
 - make lint
 - make test
 after_success:
-  - pipenv run codecov -t $CODECOV_TOKEN
+- pipenv run codecov -t $CODECOV_TOKEN
 deploy:
   provider: heroku
   api_key:
-    secure: l47XiPGynHU+BhapJNWvXTW72ajhauwBe/MbZSFHqVmXd1fbnImArcFf2LMVjIxXLBkYpUFPe2Z7whDtZcgkgA6ZERvQXsngNIecKiT+kJAip45tpzR7TNENBbRG2eK6IUAi0yAA2AsGPCJrgSfsflqenBoW386NXA8SYdTTtE/nd4gng91p83uUTQ32N7RjKGO1mdx1Z7NHFo6xwmtzF2gmX4ML0AMq8NIAD77zzHZ0y3tK1qPv2OylJoNZ8F2W1gnDOHJldoncJpWU9dimMrUsr7xa7fnZ3Clx8cfS2FsXaCbGmZpiw3x+nOsZW2RC+kTHDwsE268qilq93qfzey+/ZdoM7EwcAWjaLYaotG1KTS0CM+fiRmLAnquIWjWE1BDPtqJviOBFCrXPbmQEvunQRIGuNgdDoB+3t6QBoz87yxdiOGVWClcPDzHvW6gMlLzHKz/xRq3vpX0lxIhQI/ClQnDuO6XoaZey6xfv7N00HpofVwrikSXnQJv1SktBdl1R3t5SweExMGz+BBeqPeIzrqCJ8j0bWlvgkjQMm3ssMmDbUmc77WA908Q7epSnLwuRmUKz+Whd49gnpfE4rQz3vIGT3HnvOWYOz6aOKgs20jj3HhIHPfQa3+Tny4nffgxqZYe2zOm7CopfkhjItk7YwygDkS5urbs+ZcI9z5I=
+    secure: aT1uqNcTHwr+oslk9v3TiIXwiAXco6hvvxumKKgX/zAOUj+mS2t72dn74sM/4aXvPXdJbQ/oIL7oZxWZpNHi5TE9DKql2dOkuW5LvOvEIsukhjk5/Kueo2CJCkBzSXaG8k2oWDQxshu+6diNxkhpQ7cnFwjoRX7fEZQIO8SSgTnRmgnw+75qG91LnG/7cfPLAr0abC5iVR1OadRCyaIKY7MX5ZwR6tyOQPON+emAI/I+8tHlvEUullRsGBK6PpTJsMQWiIRbjCr8z7Qe10rgLqiclcf92MVdFol0wyHYlZ3ye2KpBy/uVvALmruEBrUbFuvHkATCJBGnglcrVRDSYl5pH11Cmri8Gc5isVKpwnsaR9IfmYy3W/zeUuZE9RGgn1lcQDwkL7Sodqp/7+rm2gn5lzkEN5FchixzrxUPZOStJW8TQJG7/am7aZxKE0UjTixzprD3f2THkKGWn+jCLev7xW3FVlVXPtqiemaw2+uPy6FqXBDBr30//YMtD8eoTr/vRB9WowrFHf3TWipN+lzoS7ltXxj48Q8/fo67qM4oC26JV1UPsdg4QanReL6qQMPIxuxLA7lbTrYO0Wx/+Xs40FtFrYwqvdr9W53EC7zGXrkywtJ421we04fmPXnEki9kf6qQG6eSDqcDoyY1tkFdMewSnV9Tfh7lTSeUfEw=
   app: nameless-inlet-33375
   skip_cleanup: true
